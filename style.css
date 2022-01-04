@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+
+/* font-family: 'Lexend Deca', sans-serif;
+font-family: 'Inter', sans-serif; */
+
+:root {
+    --Very-dark-blue: hsl(233, 47%, 7%);
+    --Dark-desaturated-blue: hsl(244, 38%, 16%);
+    --Soft-violet: rgb(170, 92, 219);
+    --White: hsl(0, 0%, 100%);
+    --Slightly-transparent-white: hsla(0, 0%, 100%, 0.75);
+    --Slightly-transparent-white: hsla(0, 0%, 100%, 0.6);
+}
+
+/* CSS reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* End */
+
+body {
+    background-color: var(--Very-dark-blue);  
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--Dark-desaturated-blue);
+    text-align: center;
+    margin: 30px;
+    border-radius: 10px;
+}
+
+.img-wrapper {
+    min-height: 232px;
+    background-image: url(images/image-header-mobile.jpg);
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    position: relative;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.overlay {
+    background-color: rgba(158, 55, 221, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.pad_border {
+    padding: 35px 25px 30px 25px;
+}
+
+.caption {
+    
+}
+
+.caption > h1 {
+    color: white;
+    font-size: 27px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    padding-bottom: 20px;
+}
+
+span {
+    color: var(--Soft-violet);
+}
+
+.caption p {
+    color: var(--Slightly-transparent-white);
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    line-height: 1.4;
+    padding-bottom: 35px;
+    font-size: 15px;
+}
+
+.list-item {
+    font-family: 'Inter', sans-serif;
+    padding-bottom: 27px;
+    line-height: 1.6;
+}
+
+.list-item h1 {
+    color: white;
+    font-weight: 700;
+    font-size: 23px;
+}
+
+.list-item h5 {
+    font-family: 'Lexend Deca', sans-serif;
+    color: var(--Slightly-transparent-white);
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@media (max-width: 370px) {
+    .img-wrapper {
+        min-height: 191px;
+    }
+}
+
+@media (min-width: 700px) {
+    main {
+        flex-direction: row-reverse;
+        text-align: left;
+        width: 935px;
+        height: 370px;
+        margin: 150px auto;
+    }
+
+    .pad_border {
+        padding: 52px 30px 30px 65px;
+    }
+
+    .img-wrapper {
+        background-image: url(images/image-header-desktop.jpg);
+        min-width: 447px;
+        border-radius: 0px 10px 10px 0px;
+    }
+
+    .overlay {
+        border-radius: 0px 10px 10px 0px;
+    }
+
+    .list {
+        display: flex;
+        float: row;
+    }
+
+    .list-item {
+        padding-bottom: 0px;
+        padding-right: 50px;
+    }
+
+    .caption > h1 {
+        line-height: 1.5;
+    }
+
+    .caption > p {
+        padding-bottom: 54px;
+    }
+
+    .list-item > h1 {
+        font-size: 20px;
+    }
+    
+}
