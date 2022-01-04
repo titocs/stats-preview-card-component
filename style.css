@@ -96,10 +96,6 @@ main {
     padding: 35px 25px 30px 25px;
 }
 
-.caption {
-    
-}
-
 .caption > h1 {
     color: white;
     font-size: 27px;
@@ -153,7 +149,7 @@ span {
     main {
         flex-direction: row-reverse;
         text-align: left;
-        width: 935px;
+        max-width: 900px;
         height: 370px;
         margin: 150px auto;
     }
